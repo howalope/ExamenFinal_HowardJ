@@ -18,5 +18,26 @@ namespace InvetarioWeb
         {
 
         }
+
+        protected void BRegistrarse_Click(object sender, EventArgs e)
+        {
+            ClsUsuarios.setCodigoUsuario(TCodigoUsuario.Text);
+            ClsUsuarios.setNombreUsuario(TNombreUsuario.Text);
+            ClsUsuarios.setClaveUsuario(TClaveUsuario.Text);
+            ClsUsuarios.setTipoUsuario(DDTipoUsuario.Text);
+
+            int resultado = ClsUsuarios.RegistroUsuario();
+
+            if (resultado > 0)
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Notify", "alert('Notification: Usuario no ha sido Registrado');", true);
+            }
+            else
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Notify", "alert('Notification: Usuario ha sido Registrado');", true);
+            }
+            return;
+            Response.Redirect("Login.aspx");
+        }
     }
 }

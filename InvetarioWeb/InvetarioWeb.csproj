@@ -110,6 +110,7 @@
     <Compile Include="CostoInventarios.aspx.designer.cs">
       <DependentUpon>CostoInventarios.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DBConnection.cs" />
     <Compile Include="InventarioMaster.Master.cs">
       <DependentUpon>InventarioMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

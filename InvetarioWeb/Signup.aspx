@@ -15,7 +15,7 @@
 </asp:DropDownList>
 <asp:SqlDataSource ID="SqlInventarioDB" runat="server" ConnectionString="<%$ ConnectionStrings:INVENTARIODBConnectionString %>" SelectCommand="SELECT [Descripcion_TipoUsuario] FROM [Tipo_Usuario]"></asp:SqlDataSource>
     <br />
-    <asp:Button ID="BRegistrarse" runat="server" Text="Registrarse" />
+    <asp:Button ID="BRegistrarse" runat="server" Text="Registrarse" OnClick="BRegistrarse_Click" />
     <br />
     <br />
        <p> <a href="Login.aspx">¿Ya tengo cuenta? Iniciar Sesión </a></p><br />
